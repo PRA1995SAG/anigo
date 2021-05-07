@@ -4,7 +4,7 @@
     "description": "Hello, In this app you can explore your favorites animes!",
     "slug": "anigo",
     "privacy": "public",
-    "sdkVersion": "41.0.1",
+    "sdkVersion": "41.0.0",
     "version": "1.0.0",
     "platforms": ["android", "ios"],
     "githubUrl": "https://github.com/PRA1995SAG/anigo.git",
