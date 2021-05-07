@@ -1,14 +1,23 @@
 {
   "expo": {
-    "name": "Assignment",
-    "slug": "Assignment",
+    "name": "Anigo",
+    "description": "Hello, In this app you can explore your favorites animes!",
+    "slug": "anigo",
+    "privacy": "public",
+    "sdkVersion": "41.0.1",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "platforms": ["android", "ios"],
+    "githubUrl": "https://github.com/PRA1995SAG/anigo.git",
+    "orientation": "default",
     "icon": "./app/assets/icon.png",
     "splash": {
       "image": "./app/assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
+    },
+    "androidStatusBar": {
+      "backgroundColor": "#2E51A2",
+      "barStyle": "light-content"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
