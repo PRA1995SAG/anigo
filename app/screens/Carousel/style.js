@@ -1,4 +1,4 @@
-import { StyleSheet, StatusBar, Dimensions } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 import Colors from "../../constants/Colors";
 
 const { width } = Dimensions.get("screen");
@@ -9,7 +9,6 @@ export default StyleSheet.create({
     backgroundColor: Colors.white,
     justifyContent: "center",
     alignItems: "center",
-    marginTop: StatusBar.currentHeight,
   },
   itemContainer: { width, alignItems: "center", padding: 20 },
   indicatorContainer: {

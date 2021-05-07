@@ -1,6 +1,5 @@
-import React, { useRef, useCallback } from "react";
-import { View, Image, Animated, Dimensions, StatusBar } from "react-native";
-import { useFocusEffect } from "@react-navigation/native";
+import React, { useRef } from "react";
+import { View, Image, Animated, Dimensions } from "react-native";
 import { useSelector } from "react-redux";
 import styles from "./style";
 const { width } = Dimensions.get("screen");
@@ -40,7 +39,7 @@ const Indicator = ({ scrollX, carousels }) => {
   );
 };
 
-const CarouselScreen = ({ navigation }) => {
+const CarouselScreen = () => {
   const scrollX = useRef(new Animated.Value(0)).current;
 
   const carousels = useSelector((state) => state.carousels);

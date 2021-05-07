@@ -1,6 +1,6 @@
 import "react-native-gesture-handler";
-import { StatusBar } from "expo-status-bar";
 import React from "react";
+import { StatusBar } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import RootTabNavigator from "./app/navigation/RootTabNavigator";
 import { createStore, combineReducers, applyMiddleware } from "redux";
@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 import ReduxThunk from "redux-thunk";
 import carouselsReducer from "./app/store/reducers/carousels";
 import listingsReducer from "./app/store/reducers/listings";
+import Colors from "./app/constants/Colors";
 
 const rootReducers = combineReducers({
   carousels: carouselsReducer,
@@ -22,7 +23,7 @@ export default function App() {
       <Provider store={store}>
         <RootTabNavigator />
       </Provider>
-      <StatusBar style="light" backgroundColor="#2E51A2" />
+      <StatusBar backgroundColor={Colors.blue900} barStyle="light-content" />
     </NavigationContainer>
   );
 }
