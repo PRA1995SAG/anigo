@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   TouchableNativeFeedback,
   Image,
+  ImageBackground,
   Text,
   View,
   Dimensions,
@@ -38,47 +39,42 @@ function Card(props) {
           ...styles.cardContainer,
         }}
       >
-        <View style={styles.imageContainer}>
-          <Image source={{ uri: props.imageUrl }} style={styles.image} />
-        </View>
-        <View style={styles.textContainer}>
-          <Text adjustsFontSizeToFit minimumFontScale={0.9} style={styles.text}>
-            {props.title}
-          </Text>
-        </View>
+        <ImageBackground source={{ uri: props.imageUrl }} style={styles.image}>
+          <View style={styles.textContainer}>
+            <Text style={styles.text}>{props.title}</Text>
+          </View>
+        </ImageBackground>
       </View>
     </TouchComponent>
   );
 }
 const styles = StyleSheet.create({
   cardContainer: {
+    flex: 1,
     justifyContent: "center",
     alignItems: "center",
     margin: 10,
     borderRadius: 12,
     overflow: "hidden",
-  },
-  imageContainer: {
-    height: "80%",
-    width: "100%",
+    elevation: 8,
+    zIndex: 100,
   },
   image: {
     width: "100%",
     height: "100%",
   },
   textContainer: {
-    height: "20%",
-    width: "100%",
-    backgroundColor: Colors.white,
-    justifyContent: "center",
-    alignItems: "center",
+    flex: 1,
+    justifyContent: "flex-end",
   },
   text: {
-    fontWeight: "700",
-    fontSize: 16,
-    paddingVertical: 20,
+    fontFamily: "mukta-bold",
+    fontSize: 24,
+    paddingVertical: 10,
     paddingHorizontal: 8,
-    color: Colors.darkBrown,
+    color: Colors.white,
+    backgroundColor: "#00000070",
+    lineHeight: 28,
   },
 });
 export default Card;

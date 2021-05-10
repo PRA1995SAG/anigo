@@ -14,6 +14,7 @@ export default StyleSheet.create({
   text: {
     fontWeight: "800",
     fontSize: 40,
+    fontFamily: "mukta-light",
     color: Colors.white,
     borderColor: Colors.white,
     borderWidth: 2,

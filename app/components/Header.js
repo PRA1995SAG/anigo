@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
     width: "85%",
     fontSize: 16,
     color: Colors.white,
+    fontFamily: "mukta-regular",
   },
   headerTouchable: {
     overflow: "hidden",

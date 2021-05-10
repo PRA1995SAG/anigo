@@ -16,6 +16,7 @@ import Header from "../../components/Header";
 import Card from "../../components/Card";
 import FAB from "../../components/FAB";
 import Colors from "../../constants/Colors";
+import Footer from "../../components/Footer";
 
 import * as ListingActions from "../../store/actions/listings";
 
@@ -109,7 +110,9 @@ const ListingScreen = (props) => {
   if (!isLoading && listings.length === 0) {
     return (
       <View style={styles.centeredView}>
-        <Text style={{ fontSize: 16 }}>Search any anime!</Text>
+        <Text style={{ fontSize: 16, fontFamily: "mukta-regular" }}>
+          Search any anime!
+        </Text>
       </View>
     );
   }
@@ -132,20 +135,7 @@ const ListingScreen = (props) => {
             setOnEndReached(false);
           }
         }}
-        ListFooterComponent={() =>
-          isRefreshing && (
-            <View
-              style={{
-                justifyContent: "center",
-                alignItems: "center",
-                marginVertical: 10,
-                backgroundColor: "transparent",
-              }}
-            >
-              <ActivityIndicator size="large" color={Colors.white} />
-            </View>
-          )
-        }
+        ListFooterComponent={() => isRefreshing && <Footer />}
         renderItem={({ item }) => (
           <Card imageUrl={item.imageUrl} title={item.title} />
         )}

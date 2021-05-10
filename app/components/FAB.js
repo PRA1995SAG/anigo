@@ -33,8 +33,8 @@ function FAB(props) {
 }
 const styles = StyleSheet.create({
   fabContainer: {
-    right: 50,
-    bottom: 50,
+    right: 20,
+    bottom: 20,
     position: "absolute",
     width: 60,
     height: 60,
